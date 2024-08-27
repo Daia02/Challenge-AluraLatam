@@ -1,0 +1,265 @@
+/* Conexión de la fuente de tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    background: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.cabecera {
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 8%;
+}
+
+.contenido-principal {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    justify-content: center;
+}
+
+.texto-entrada {
+    resize: none;
+    margin-top: 90px;
+    color: darkblue;
+    border: none;
+}
+
+.texto-entrada::placeholder {
+    color: darkblue;
+}
+
+.texto-entrada:focus {
+    outline: none;
+}
+
+.texto-salida {
+    resize: none;
+    margin-left: 98px;
+    padding: 20px;
+    padding-bottom: 120px;
+    height: 612px;
+    color: darkblue;
+    background: white;
+    background-image: url(imagenes/Muñeco.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.texto-salida:focus {
+    outline: none;
+}
+
+.restriccion-entrada {
+    color: grey;
+    font-size: 16px;
+}
+
+.grupo-botones {
+    display: flex;
+    margin-top: 18px;
+}
+
+.boton-encriptar {
+    color: #D8DFE8;
+    background: darkblue;
+    border: 1px solid darkblue;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.boton-desencriptar {
+    color: darkblue;
+    background: #D8DFE8;
+    border: 1px solid darkblue;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.contenedor-mensaje {
+    background: transparent;
+    margin-left: 120px;
+    margin-top: -240px;
+    width: 360px;
+    position: absolute;
+    text-align: center;
+}
+
+.mensaje-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: initial;
+    background: transparent;
+}
+
+.mensaje-descripcion {
+    font-size: 16px;
+    line-height: initial;
+    background: transparent;
+}
+
+.boton-copiar {
+    display: none; /* Oculto por defecto */
+    color: darkblue;
+    background: #D8DFE8;
+    border: 1px solid darkblue;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 67px;
+    width: 336px;
+    margin-top: 120px;
+}
+
+.boton-copiar:hover {
+    background: #555;
+    color: white;
+}
+
+.notificacion {
+    display: none; /* Oculto por defecto */
+    color: white;
+    background-color: #555;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+.boton-encriptar:hover, .boton-desencriptar:hover, .boton-copiar:hover {
+    background: #555;
+    color: white;
+}
+
+.notificacion {
+    display: none;
+    width: 300px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80px;
+    left: 100px;
+    margin-left: -75px;
+    opacity: .6;
+}
+
+/* Laptop */
+@media screen and (max-width: 1366px) {
+    .contenido-principal {
+        margin-left: 0px;
+    }
+    .texto-entrada {
+        margin-top: 50px;
+        width: 686px;
+        height: 400px;
+    }
+    .grupo-botones, .texto-salida {
+        margin-top: 0px;
+    }
+    .texto-salida {
+        height: 550px;
+    }
+    .contenedor-mensaje {
+        margin-top: -160px;
+    }
+    .boton-copiar {
+        margin-top: 60px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 15%;
+        margin-top: 40px;
+    } 
+    .contenido-principal {
+        display: block;
+        margin: 0px 30px;
+    }
+    .texto-entrada {
+        margin-top: 60px;
+        width: 100%;
+        height: 700px;
+    }
+    .grupo-botones {
+        margin-top: 0px;
+    }
+    .texto-salida {
+        margin: 40px 0px;
+        width: 655px;
+        height: 300px;
+        background: white;
+    }
+    .contenedor-mensaje {
+        margin-top: -250px;
+        margin-left: 0px;
+        width: 655px;
+    }
+    .mensaje-titulo {
+        margin-bottom: .5em;
+    }
+    .boton-copiar {
+        margin-top: 100px;
+    }
+    .notificacion {
+        margin-left: 70px;
+    }
+}
+
+/* Celular */
+@media screen and (max-width: 375px) {
+    .logo {
+        margin-top: 30px;
+        width: 30%;
+    }
+    .texto-entrada {
+        margin-top: 20px;
+        height: 340px;
+    }
+    .grupo-botones {
+        display: block;
+        margin-top: 0px;
+    }
+    .boton-encriptar, .boton-desencriptar {
+        width: 100%;
+    }
+    .boton-desencriptar {
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    .texto-salida, .contenedor-mensaje, .boton-copiar {
+        width: 295px;
+    }
+    .contenedor-mensaje {
+        margin-left: 10px;
+    }
+    .texto-salida {
+        padding: 10px;
+        padding-bottom: 120px;
+        height: 180px;
+    }
+    .notificacion {
+        width: 285px;
+        margin-left: -100px;
+    }
+}
