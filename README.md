@@ -1,5 +1,5 @@
 Reglas de encriptador de texto: 
-Las "llaves" de encriptación que utilizaremos son las siguientes:
+Las "llaves" de encriptación que se utilizaron  son las siguientes:
 
 La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
